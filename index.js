@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const app = express();
-const PORT = 8080;
+const PORT = 3000;
 const TARGET_URL = 'https://hardverapro.hu/aprok/hardver/videokartya/nvidia/geforce_30xx/index.html';
 const CACHE_DURATION_MS = 30 * 60 * 1000; // 30 minutes
 async function scrapeProducts() {
