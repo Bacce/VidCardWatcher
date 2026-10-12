@@ -110,23 +110,29 @@ app.get('/', async (req, res) => {
     <h1>Video Cards Watcher</h1>
     <div class="controls">
         <label>
-            <input type="checkbox" id="showAllToggle"> Show All (Hide 12GB Non-Iced Filter)
+            Filter: <input type="text" id="filterText" value="12GB">
         </label>
-        <p><small>Initial filter: Name contains "12GB" AND is NOT iced.</small></p>
+        <label style="margin-left: 20px;">
+            <input type="checkbox" id="icedCheckbox"> Iced
+        </label>
     </div>
     <div id="list" class="product-list"></div>
 
     <script>
         const products = ${JSON.stringify(products)};
         const listEl = document.getElementById('list');
-        const toggle = document.getElementById('showAllToggle');
+        const filterText = document.getElementById('filterText');
+        const icedCheckbox = document.getElementById('icedCheckbox');
 
-        function render(showAll) {
+        function render() {
+            const text = filterText.value.toLowerCase();
+            const isIcedRequested = icedCheckbox.checked;
+
             listEl.innerHTML = '';
             const filtered = products.filter(p => {
-                if (showAll) return true;
-                const nameMatch = p.name.toLowerCase().includes('12gb');
-                return nameMatch && !p.isIced;
+                const nameMatch = p.name.toLowerCase().includes(text);
+                const icedMatch = (p.isIced === isIcedRequested);
+                return nameMatch && icedMatch;
             });
 
             if (filtered.length === 0) {
@@ -148,8 +154,9 @@ app.get('/', async (req, res) => {
             });
         }
 
-        toggle.addEventListener('change', (e) => render(e.target.checked));
-        render(false);
+        filterText.addEventListener('input', render);
+        icedCheckbox.addEventListener('change', render);
+        render();
     </script>
 </body>
 </html>
