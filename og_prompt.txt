@@ -1,0 +1,61 @@
+Create a Nodejs application. The app download the following website:
+https://hardverapro.hu/aprok/hardver/videokartya/nvidia/geforce_30xx/index.html
+
+Then parse the content to have a list of products in a json. Each product in under the .media class.
+I need the name of the product from .uad-col-title h1 and the time of publish in .uad-time, and the link to the page as well.
+I also need the price of it from .uad-price, and if it's iced or not, .uad-price-iced class.
+
+The application should return in a html the products where the name contains "12gb" in it and not iced, with an optional toggle to show all of them.
+
+Only scrape the list once if the request happens within 30 minutes. Otherwise, use a cached response.
+
+Here is a snipet of a non-iced product.
+
+<li class="media" data-uadid="7721598">
+				<div class="uad-col uad-col-image">
+					<a class="uad-image" href="https://hardverapro.hu/apro/gigabyte_rtx3060_eagle_oc_12gb_2/friss.html">
+						<img src="//cdn.rios.hu/dl/uad/2026-09/7721598/img_8340.jpg/100" alt="" style="">
+					</a>
+					<span class="uad-save">
+						<a href="javascript:;" data-toggle="tooltip" data-placement="left" data-original-title="Belépés után a kedvencekhez adhatod" data-modal-open="/muvelet/hozzaferes/belepes.php?url=%2Faprok%2Fhardver%2Fvideokartya%2Fnvidia%2Fgeforce_30xx%2Findex.html">
+							<span class="far fa-heart"></span>
+						</a>
+					</span>
+				</div>
+				<!--<div class="media-body">-->
+					<div class="uad-col uad-col-title">
+						<h1>
+							<a href="https://hardverapro.hu/apro/gigabyte_rtx3060_eagle_oc_12gb_2/friss.html">GIGABYTE RTX 3060 EAGLE OC 12GB</a>
+							<small class="uad-time">– <time>2026-09-23</time></small>
+						</h1>
+						<div class="uad-price">
+							<span class="text-nowrap">95 000 Ft</span>
+						</div>
+					</div>
+					<div class="uad-col uad-col-price">
+						<div class="uad-price">
+							<span class="text-nowrap">95 000 Ft</span>
+						</div>
+					</div>
+					<div class="uad-col uad-col-info">
+						<div class="uad-user">
+							<span class="uad-user-face">
+								<img src="//cdn.rios.hu/dl/faces/small/nerd.gif" alt="Arckép">
+							</span>
+							<span class="uad-user-text">
+								<a href="/tag/coupesmike.html?uadid=7721598">coupesmike</a>
+								<span class="uad-rating" title="" data-toggle="tooltip" data-original-title="nincs értékelése">n.a.</span>
+							</span>
+						</div>
+						<div class="uad-cities">Aszód, Vanyarc</div>
+						<div class="uad-time"><time>2026-09-23</time></div>
+					</div>
+					<div class="uad-col uad-col-icons">
+						<span class="uad-save">
+							<a href="javascript:;" data-toggle="tooltip" data-placement="left" data-original-title="Belépés után a kedvencekhez adhatod" data-modal-open="/muvelet/hozzaferes/belepes.php?url=%2Faprok%2Fhardver%2Fvideokartya%2Fnvidia%2Fgeforce_30xx%2Findex.html">
+								<span class="far fa-heart"></span>
+							</a>
+						</span>
+					</div>
+				<!--</div>-->
+			</li>
