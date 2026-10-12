@@ -6,6 +6,8 @@ const app = express();
 const PORT = 3000;
 const TARGET_URL = 'https://hardverapro.hu/aprok/hardver/videokartya/nvidia/geforce_30xx/index.html';
 const CACHE_DURATION_MS = 30 * 60 * 1000; // 30 minutes
+const DISABLE_CACHE = false; // Set to true to bypass caching
+
 async function scrapeProducts() {
     console.log('Scraping target website...');
     try {
@@ -66,8 +68,8 @@ let lastFetchTime = 0;
 
 async function getProducts() {
     const now = Date.now();
-    if (cachedProducts && (now - lastFetchTime < CACHE_DURATION_MS)) {
-        console.log('Using in-memory cached data...');
+    if (!DISABLE_CACHE && cachedProducts && (now - lastFetchTime < CACHE_DURATION_MS)) {
+        console.log('Returning cached products...');
         return cachedProducts;
     }
 
