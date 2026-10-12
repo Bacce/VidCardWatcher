@@ -12,7 +12,7 @@ async function scrapeProducts() {
         const { data } = await axios.get(TARGET_URL, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-                'Cookie': 'sid=68735af0e31389c2dbc8a0f01b83bfbd1d43ad148549bc46dd2833665fdfe541; vid=f92b7eedbb96b0d3144b27732899067dd0759c985304658877a6172aa703edde; usprivacy=1---; euconsent-v2=CQr-V4AQr-V4AAKA9AHUC0FgAAAAAEPgAA6gAAAZ4ABMNDogDLIgUCBQEIIEACgrCACgQBAAAkBRAQAmDAhyBgAusIkAIAUAAQQAgABBgACAAASABCIAIACAQAgQCBQABgAQBAQAMDAAGAChEAgABAdAxSAggECwASIwoDBAhAAQCAlsqEEoGBBHCFIscAggREwUAACIABUBAIB4WAhJKiViQQBcQXQAIAAACUYIoAKQEwBRQGQLQVgScBkaYAg-YJEkOgiAJghIyDIhJUEg8UxRAghyA2KWYA6eIKAGXayQh_qBZsAXIl2HUlYSBgAA.IAAA.YAAAAAAAAAAA; IABGPP_HDR_GppString=DBABMA~CQr-V4AQr-V4AAKA9AHUC0FgAAAAAEPgAA6gAAAZ4ABMNDogDLIgUCBQEIIEACgrCACgQBAAAkBRAQAmDAhyBgAusIkAIAUAAQQAgABBgACAAASABCIAIACAQAgQCBQABgAQBAQAMDAAGAChEAgABAdAxSAggECwASIwoDBAhAAQCAlsqEEoGBBHCFIscAggREwUAACIABUBAIB4WAhJKiViQQBcQXQAIAAACUYIoAKQEwBRQGQLQVgScBkaYAg-YJEkOgiAJghIyDIhJUEg8UxRAghyA2KWYA6eIKAGXayQh_qBZsAXIl2HUlYSBgAA.IAAA.YAAAAAAAAAAA; _pubcid=e95f5130-eb01-4e68-9d34-de2e83aca946; nvq_hid=38f4f0d1-a4e8-48a8-bd9d-4728ef70d324'
+                'Cookie': 'sid=92d54944e48e11ca04ba52a3c4b0a73ebb7671d4b9c7da12cd5506212fd005db; vid=60a7a2afbe34cccc8a3ed7433928fd3af106041a2e03cb1a3cc37f2ad5a2f480; usprivacy=1---; euconsent-v2=CQr-V4AQr-V4AAKA9AHUC0FsAP_gAEPgAA6gM8tR_G__bWlr-bb3abtkeYxP9_hr7sQxBgbIkm4FzLvW7JwGx2EaJAyatiIKmRIAu3DBIQNlHBDURUCgKIAFryDMaE2U4TNKJ6BkiFMZIytQCExvm4tjeQCZ4ur_9kc0mB-s6dr-2dzyy6hHn3K5fmS1UJSdIYesDfv-ZhOS-9IE9-x8v4v4_EbpEm0eSVn9pEsp4zc6Yns6dBmxt-Tyff6Pn_f71fS7X_ve_n3zv8oXn7rr6-__f3-7v__-bf-___b-__7Z_zM_37_v_ftb-_4M8AAmGh0QBlkQKBAoCEECABQVhABQIAgAASAogIATBgQ5AwAXWESAEAKAAIIAQAAgwABAAAJAAhEAEABAIAQIBAoAAwAIAgIAGBgADABQiAQAAgOgYpAQQCBYAJEYUBggQgAIBAS2VCCUDAgjhCkWOAQQIiYKAABEAAqAgEA8LAQklRKxIIAuILoAEAAABKMEUAFICYAooDIFoKwJOAyNMAQfMEiSHQRAEwQkZBkQkqCQeKYogQQ5AbFLMAdPEFADLtZIQ_1As2ALkS7DqSsJAwAA.IAAA.YAAAAAAAAAAA; IABGPP_HDR_GppString=DBABMA~CQr-V4AQr-V4AAKA9AHUC0FsAP_gAEPgAA6gM8tR_G__bWlr-bb3abtkeYxP9_hr7sQxBgbIkm4FzLvW7JwGx2EaJAyatiIKmRIAu3DBIQNlHBDURUCgKIAFryDMaE2U4TNKJ6BkiFMZIytQCExvm4tjeQCZ4ur_9kc0mB-s6dr-2dzyy6hHn3K5fmS1UJSdIYesDfv-ZhOS-9IE9-x8v4v4_EbpEm0eSVn9pEsp4zc6Yns6dBmxt-Tyff6Pn_f71fS7X_ve_n3zv8oXn7rr6-__f3-7v__-bf-___b-__7Z_zM_37_v_ftb-_4M8AAmGh0QBlkQKBAoCEECABQVhABQIAgAASAogIATBgQ5AwAXWESAEAKAAIIAQAAgwABAAAJAAhEAEABAIAQIBAoAAwAIAgIAGBgADABQiAQAAgOgYpAQQCBYAJEYUBggQgAIBAS2VCCUDAgjhCkWOAQQIiYKAABEAAqAgEA8LAQklRKxIIAuILoAEAAABKMEUAFICYAooDIFoKwJOAyNMAQfMEiSHQRAEwQkZBkQkqCQeKYogQQ5AbFLMAdPEFADLtZIQ_1As2ALkS7DqSsJAwAA.IAAA.YAAAAAAAAAAA; _pubcid=9ab0c7b6-ac47-4509-b5c0-0d4cc730123f; _ga=GA1.1.1322316.1791810863; __gads=ID=8c405793398a8411:T=1791810862:RT=1791810862:S=ALNI_Mazp632EBdmc04FrSDr0Cn5flEk6A; __gpi=UID=0000159ab3d9690e:T=1791810862:RT=1791810862:S=ALNI_MZFW7oB-_nFzgv7Zrxc03vsL8-Vgw; __eoi=ID=54b2ca6bcca5c912:T=1791810862:RT=1791810862:S=AA-AfjaNaQX8JXXFykS635PgngMe; __gfp_64b=eTrMITBS17nibikb.5hYIFMza5ycklED395O6mrWpEb.77|1791810863|2|||8:3:32; _cc_id=93bb7718bf04c473f674c7d7cf7859b; panoramaId_expiry=1792415665811; panoramaId=608f4e4aeba7cff579be139502ac185ca02c70f660f18b90d3e4f5648bd3d554; panoramaIdType=panoDevice; _ga_T8S5KHM1SF=GS2.1.s1791810863$o1$g1$t1791810879$j44$l0$h0; nvq_hid=fe6343ed-bf53-4031-9c5a-42a7cf3c6266'
             }
         });
         const $ = cheerio.load(data);
@@ -46,7 +46,18 @@ async function scrapeProducts() {
 
         return products;
     } catch (error) {
-        console.error('Scraping failed:', error.message);
+        if (error.response) {
+            console.error('Scraping failed - Response Error:');
+            console.error('Status:', error.response.status);
+            console.error('Status Text:', error.response.statusText);
+            console.error('Headers:', JSON.stringify(error.response.headers, null, 2));
+            console.error('Data:', error.response.data);
+        } else if (error.request) {
+            console.error('Scraping failed - No Response:');
+            console.error(error.request);
+        } else {
+            console.error('Scraping failed - Error:', error.message);
+        }
         throw error;
     }
 }
